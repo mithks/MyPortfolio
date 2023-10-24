@@ -19,9 +19,9 @@ export default class Floor{
         this.plane = new THREE.Mesh(this.geometry, this.material);
         this.scene.add(this.plane);
         this.plane.rotation.x = Math.PI / 2;
-        this.plane.position.y = -0.3;
+        this.plane.position.y = -0.1;
         this.plane.receiveShadow = true;
-        
+
     }
 
     resize(){
