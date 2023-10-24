@@ -28,10 +28,11 @@ export default class Camera{
             (-this.sizes.aspect * this.sizes.frustrum)/2, 
             (this.sizes.aspect * this.sizes.frustrum)/2, 
             this.sizes.frustrum/2, -this.sizes.frustrum/2, 
-            -10, 
-            10
+            -50, 
+            50
         );
         
+        this.orthographicCamera.position.x = 0.15;
         this.orthographicCamera.position.y = 3.5;
         this.orthographicCamera.position.z = 5;
         this.orthographicCamera.rotation.x = -Math.PI / 6;
