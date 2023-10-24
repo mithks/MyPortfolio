@@ -12,9 +12,10 @@ html, body{
 }
 
 :root{
+  --text-gold: #ab860b;
   --text-black: #333333;
-  --primary-color: #FAF4E5;
-  --primary-pink: #E5A1AA;
+  --primary-color: #e6ddc5;
+  --primary-pink: #331d08;
 }
 
 /* Experience --------------------------------------------------- */
@@ -170,10 +171,12 @@ html, body{
 
 .hero-main-title{
   font-size: 64px;
+  color: var(--text-gold);
 }
 
 .hero-main-description{
   font-size: 18px;
+  color: var(--text-gold);
 }
 
 .hero-second-subheading{
