@@ -15,7 +15,7 @@ html, body{
   --text-gold: #ab860b;
   --text-black: #333333;
   --primary-color: #e6ddc5;
-  --primary-pink: #331d08;
+  --primary-brown: #331d08;
 }
 
 /* Experience --------------------------------------------------- */
@@ -45,6 +45,60 @@ html, body{
   position: relative;
 }
 
+/* Toggle Bar --------------------------------------------------- */
+
+.toggle-bar{
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 48px;
+  right: 48px;
+  z-index: 99999999999;
+}
+
+.sun-wrapper, 
+.moon-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-button{
+  cursor: pointer;
+  position: relative;
+  width: 56px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-brown);
+  border-radius: 999px;
+  margin: 0px 16px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.toggle-circle{
+  position: absolute;
+  left: 6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-button:hover .toggle-circle{
+  transform: scale(0.9);
+}
+
+.slide{
+  left: 28px;
+}
+
 /* Sections --------------------------------------------------- */
 
 .section-margin{
@@ -70,7 +124,7 @@ html, body{
 .section-intro-wrapper{
   position: relative;
   padding: 20% 5%;
-  border-bottom: 2px solid var(--primary-pink);
+  border-bottom: 2px solid var(--primary-brown);
   padding-bottom: 400px;
 }
 
@@ -96,7 +150,7 @@ html, body{
 
 .section-title{
   position: relative;
-  color: var(--primary-pink)
+  color: var(--primary-brown)
 }
 
 .section-title-text{
@@ -117,7 +171,7 @@ html, body{
   width: 100%;
   max-width: 278px;
   height: 60px;
-  border: 1px solid var(--primary-pink);
+  border: 1px solid var(--primary-brown);
   transform-origin: left;
   transform: skewY(-25deg);
 }
@@ -131,14 +185,14 @@ html, body{
 .styleThree{
   top: 80px;
   transform: skewY(25deg);
-  background-color: var(--primary-pink);
+  background-color: var(--primary-brown);
 }
 
 .section-number{
   position: absolute;
   bottom: 15px;
   right: 0;
-  color: var(--primary-pink);
+  color: var(--primary-brown);
   font-size: 24px;
 }
 
