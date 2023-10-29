@@ -32,6 +32,7 @@ export default class World{
     switchTheme(theme){
         if (this.environment){
             this.environment.switchTheme(theme);
+            
         }
     }
 

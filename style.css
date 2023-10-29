@@ -11,11 +11,41 @@ html, body{
   color: var(--text-black);
 }
 
+h1,
+section,
+p,
+span,
+svg{
+  transition: background-color 0.5s, color 0.5s;
+}
+
 :root{
-  --text-gold: #ab860b;
-  --text-black: #333333;
-  --primary-color: #e6ddc5;
-  --primary-brown: #331d08;
+  /* Light Theme variables */
+  --color-text-light: #333333;
+  --color-bg-light: #e6ddc5dd;
+  --color-brown-light: #331d08;
+  --color-gold-light: #ab860b;
+  --color-purple-light: #834ed9;
+
+  /* Dark Theme variables */
+  --color-text-dark: #e6ddc5;
+  --color-bg-dark: #735a06dd;
+}
+
+.light-theme{
+  --color-text: var(--color-text-light);
+  --color-bg: var(--color-bg-light);
+  --color-brown: var(--color-brown-light);
+  --color-gold: var(--color-gold-light);
+  --color-purple: var(--color-purple-light);
+}
+
+.dark-theme{
+  --color-text: var(--color-text-dark);
+  --color-bg: var(--color-bg-dark);
+  --color-brown: var(--color-text-dark);
+  --color-gold: var(--color-text-dark);
+  --color-purple: var(--color-text-dark);
 }
 
 /* Experience --------------------------------------------------- */
@@ -64,6 +94,7 @@ html, body{
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  color: var(--color-text);
 }
 
 .toggle-button{
@@ -74,7 +105,7 @@ html, body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--primary-brown);
+  background-color: var(--color-text);
   border-radius: 999px;
   margin: 0px 16px;
   border: none;
@@ -87,7 +118,7 @@ html, body{
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: var(--primary-color);
+  background-color: var(--color-bg);
   transition: all 0.2s ease-in-out;
 }
 
@@ -110,7 +141,7 @@ html, body{
   width: 50%;
   padding: 1000px 4%;
   margin: 0;
-  background-color: var(--primary-color);
+  background-color: var(--color-bg);
 }
 
 .left{
@@ -124,7 +155,7 @@ html, body{
 .section-intro-wrapper{
   position: relative;
   padding: 20% 5%;
-  border-bottom: 2px solid var(--primary-brown);
+  border-bottom: 2px solid var(--color-brown);
   padding-bottom: 400px;
 }
 
@@ -138,19 +169,21 @@ html, body{
   font-weight: 700;
   line-height: 1.8;
   margin-top: 64px;
+  color: var(--color-text);
 }
 
 .section-text{
   line-height: 2;
   margin-top: 18px;
   font-size: 16px;
+  color: var(--color-text);
 }
 
 /* Decoration */
 
 .section-title{
   position: relative;
-  color: var(--primary-brown)
+  color: var(--color-brown)
 }
 
 .section-title-text{
@@ -161,6 +194,7 @@ html, body{
   transform: skewY(25deg);
   z-index: 5;
   text-transform: uppercase;
+  color: var(--color-brown);
 }
 
 .styleOne,
@@ -171,7 +205,7 @@ html, body{
   width: 100%;
   max-width: 278px;
   height: 60px;
-  border: 1px solid var(--primary-brown);
+  border: 1px solid var(--color-brown);
   transform-origin: left;
   transform: skewY(-25deg);
 }
@@ -185,14 +219,14 @@ html, body{
 .styleThree{
   top: 80px;
   transform: skewY(25deg);
-  background-color: var(--primary-brown);
+  background-color: var(--color-brown);
 }
 
 .section-number{
   position: absolute;
   bottom: 15px;
   right: 0;
-  color: var(--primary-brown);
+  color: var(--color-brown);
   font-size: 24px;
 }
 
@@ -215,25 +249,30 @@ html, body{
   position: absolute;
   bottom: 168px;
   left: 0;
+  color: var(--color-text);
 }
 
 .hero-second{
   position: absolute;
   top: calc(50% - 120px);
   right: 0;
+  color: var(--color-text);
 }
 
 .hero-main-title{
   font-size: 64px;
-  color: var(--text-gold);
+  /*color: var(--text-gold);*/
+  color: var(--color-gold);
 }
 
 .hero-main-description{
   font-size: 18px;
-  color: var(--text-gold);
+  /*color: var(--text-gold);*/
+  color: var(--color-gold);
 }
 
 .hero-second-subheading{
   font-size: 18px;
   text-transform: uppercase;
+  color: var(--color-gold);
 }
