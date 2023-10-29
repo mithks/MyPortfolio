@@ -25,7 +25,7 @@ svg{
   --color-bg-light: #e6ddc5dd;
   --color-brown-light: #331d08;
   --color-gold-light: #ab860b;
-  --color-purple-light: #834ed9;
+  --color-purple-light: #634b7e;
 
   /* Dark Theme variables */
   --color-text-dark: #e6ddc5;
@@ -275,4 +275,37 @@ svg{
   font-size: 18px;
   text-transform: uppercase;
   color: var(--color-gold);
+}
+
+/* Other Colors Override */
+.gold-text{
+  color: var(--color-gold);
+}
+
+.gold-border{
+  border-color: var(--color-gold);
+}
+
+.gold-background{
+  background-color: var(--color-gold);
+}
+
+.purple-text{
+  color: var(--color-purple);
+}
+
+.purple-border{
+  border-color: var(--color-purple);
+}
+
+.purple-background{
+  background-color: var(--color-purple);
+}
+
+/* Media Queries */
+
+@media (max-width: 968px){
+  .section{
+    width: 100%;
+  }
 }
