@@ -22,14 +22,14 @@ svg{
 :root{
   /* Light Theme variables */
   --color-text-light: #333333;
-  --color-bg-light: #e6ddc5dd;
+  --color-bg-light: #e6ddc5;
   --color-brown-light: #331d08;
   --color-gold-light: #ab860b;
   --color-purple-light: #634b7e;
 
   /* Dark Theme variables */
   --color-text-dark: #e6ddc5;
-  --color-bg-dark: #735a06dd;
+  --color-bg-dark: #735a06;
 }
 
 .light-theme{
