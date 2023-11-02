@@ -11,6 +11,7 @@ export default class Room{
         this.time = this.experience.time;
         this.room = this.resources.items.room;
         this.actualRoom = this.room.scene;
+        this.roomChildren = {};
 
         this.lerp = {
             current : 0,
@@ -44,6 +45,16 @@ export default class Room{
                 child.material.transmission = 1;
                 child.material.opacity = 1;
             }
+
+            child.scale.set(0, 0, 0);
+
+            if (child.name === "Cube"){
+                // child.scale.set(0.2, 0.2, 0.2);
+                child.position.set(0, 0.2, 0);
+                child.rotation.y = Math.PI / 4;
+            }
+
+            this.roomChildren[child.name.toLowerCase()] = child;
         });
 
         const width = 2;
@@ -53,7 +64,9 @@ export default class Room{
         rectLight.position.set( 0.147278, 1.5, 0.3 );
         rectLight.rotation.x = -Math.PI / 2;
         rectLight.rotation.z = Math.PI / 4;
-        this.actualRoom.add( rectLight )
+        this.actualRoom.add( rectLight );
+
+        this.roomChildren['rectLight'] = rectLight;
 
         //const rectLightHelper = new RectAreaLightHelper( rectLight );
         //rectLight.add( rectLightHelper );
