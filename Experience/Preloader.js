@@ -1,6 +1,7 @@
 import { EventEmitter } from "events";
 import Experience from "./Experience.js";
 import GSAP from "gsap"
+import { transformWithEsbuild } from "vite";
 
 export default class Preloader extends EventEmitter{
     constructor(){
@@ -32,20 +33,48 @@ export default class Preloader extends EventEmitter{
     firstIntro(){
         this.timeline = new GSAP.timeline();
 
-        this.timeline.to(this.roomChildren.cube.scale, {
-            x: 0.4,
-            y: 0.4,
-            z: 0.4,
-            ease: "back.out(2.5)",
-            duration: 0.7,
-        }).to(this.room.position, {
-            x: -1,
-            ease: "power1.out",
-            duration: 0.7,
-        });
+        if (this.device === "desktop"){
+            this.timeline.to(this.roomChildren.cube.scale, {
+                x: 0.4,
+                y: 0.4,
+                z: 0.4,
+                ease: "back.out(2.5)",
+                duration: 0.7,
+            }).to(this.room.position, {
+                x: -1,
+                ease: "power1.out",
+                duration: 0.7,
+            });
+        }
+        else{
+            this.timeline.to(this.roomChildren.cube.scale, {
+                x: 0.4,
+                y: 0.4,
+                z: 0.4,
+                ease: "back.out(2.5)",
+                duration: 0.7,
+            }).to(this.room.position, {
+                z: -1,
+                ease: "power1.out",
+                duration: 0.7,
+            });
+        }
+        
+    }
+
+    onScroll(){
+        if (e.deltaY > 0){
+            window.removeEventListener("wheel", this.scrollOnceEvent);
+            this.playSecondIntro();
+        }
     }
 
     playIntro(){
         this.firstIntro();
+        this.scrollOnceEvent = this.onScroll.bind(this);
+        window.addEventListener("wheel", this.scrollOnceEvent);
+    }
+    playSecondIntro(){
+        this.secondIntro();
     }
 }
