@@ -11,10 +11,6 @@ html, body{
   color: var(--text-black);
 }
 
-/* body{
-  overflow: hidden;
-} */
-
 h1,
 section,
 p,
@@ -29,8 +25,8 @@ svg{
   --color-bg-light: #e6ddc5;
   --color-brown-light: #331d08;
   --color-gold-light: #ab860b;
-  --color-purple-light: #a778dd;
-  
+  --color-purple-light: #634b7e;
+
   /* Dark Theme variables */
   --color-text-dark: #e6ddc5;
   --color-bg-dark: #735a06;
@@ -71,7 +67,7 @@ svg{
 .page{
   z-index: 99999;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 }
 
