@@ -21,15 +21,15 @@ svg{
 
 :root{
   /* Light Theme variables */
-  --color-text-light: #333333;
-  --color-bg-light: #e6ddc5;
-  --color-brown-light: #331d08;
-  --color-gold-light: #ab860b;
-  --color-purple-light: #634b7e;
+  --color-text-light: #003049;
+  --color-bg-light: #eae2b7;
+  --color-brown-light: #ff9aa2;
+  --color-gold-light: #b5ead7;
+  --color-purple-light: #c7ceea;
 
   /* Dark Theme variables */
-  --color-text-dark: #e6ddc5;
-  --color-bg-dark: #735a06;
+  --color-text-dark: #eaetext
+  --color-bg-dark: #003049;
 }
 
 .light-theme{
@@ -298,19 +298,19 @@ svg{
 .hero-main-title{
   font-size: 64px;
   /*color: var(--text-gold);*/
-  color: var(--color-gold);
+  color: var(--color-text);
 }
 
 .hero-main-description{
   font-size: 18px;
   /*color: var(--text-gold);*/
-  color: var(--color-gold);
+  color: var(--color-text);
 }
 
 .hero-second-subheading{
   font-size: 18px;
   text-transform: uppercase;
-  color: var(--color-gold);
+  color: var(--color-text);
 }
 
 /* Other Colors Override */

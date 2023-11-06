@@ -34,7 +34,7 @@ export default class Environment{
     }
 
     setSunlight(){
-        this.sunLight = new THREE.DirectionalLight("#ffffff", 3);
+        this.sunLight = new THREE.DirectionalLight("#ffffff", 2);
         this.sunLight.castShadow = true;
         this.sunLight.shadow.camera.far = 20;
         this.sunLight.shadow.mapSize.set(2048, 2048);
@@ -42,7 +42,7 @@ export default class Environment{
         this.sunLight.position.set(-1, 7, 3);
         this.scene.add(this.sunLight);
 
-        this.ambientLight = new THREE.AmbientLight("#ffda75", 1);
+        this.ambientLight = new THREE.AmbientLight("#ffda75", 0.1);
         this.scene.add(this.ambientLight);
     }
 
@@ -77,10 +77,10 @@ export default class Environment{
                 b: 0.19215686274509805,
             });
             GSAP.to(this.sunLight, {
-                intensity: 3,
+                intensity: 2,
             });
             GSAP.to(this.ambientLight, {
-                intensity: 1,
+                intensity: 0.1,
             });
         }
     }
