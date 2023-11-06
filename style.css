@@ -21,31 +21,31 @@ svg{
 
 :root{
   /* Light Theme variables */
-  --color-text-light: #003049;
-  --color-bg-light: #eae2b7;
-  --color-brown-light: #ff9aa2;
-  --color-gold-light: #b5ead7;
-  --color-purple-light: #c7ceea;
+  --color-text-light: #2D5378;
+  --color-bg-light: #C4C2C0;
+  --color-main-light: #64A0B5;
+  --color-second-light: #DC654C;
+  --color-backup-light: #F4CB95;
 
   /* Dark Theme variables */
-  --color-text-dark: #eae2b7;
-  --color-bg-dark: #003049;
+  --color-text-dark: #AED1D7;
+  --color-bg-dark: #0F3729;
 }
 
 .light-theme{
   --color-text: var(--color-text-light);
   --color-bg: var(--color-bg-light);
-  --color-brown: var(--color-brown-light);
-  --color-gold: var(--color-gold-light);
-  --color-purple: var(--color-purple-light);
+  --color-main: var(--color-main-light);
+  --color-second: var(--color-second-light);
+  --color-backup: var(--color-backup-light);
 }
 
 .dark-theme{
   --color-text: var(--color-text-dark);
   --color-bg: var(--color-bg-dark);
-  --color-brown: var(--color-text-dark);
-  --color-gold: var(--color-text-dark);
-  --color-purple: var(--color-text-dark);
+  --color-main: var(--color-text-dark);
+  --color-second: var(--color-text-dark);
+  --color-backup: var(--color-text-dark);
 }
 
 /* Experience --------------------------------------------------- */
@@ -180,7 +180,7 @@ svg{
 .progress-bar{
   height: 100vh;
   width: 100%;
-  background-color: var(--color-brown);
+  background-color: var(--color-main);
   transform-origin: top center;
   transform: scaleY(1);
 }
@@ -190,7 +190,7 @@ svg{
 .section-intro-wrapper{
   position: relative;
   padding: 20% 5%;
-  border-bottom: 2px solid var(--color-brown);
+  border-bottom: 2px solid var(--color-text);
   padding-bottom: 400px;
 }
 
@@ -218,7 +218,7 @@ svg{
 
 .section-title{
   position: relative;
-  color: var(--color-brown)
+  color: var(--color-text)
 }
 
 .section-title-text{
@@ -229,7 +229,7 @@ svg{
   transform: skewY(25deg);
   z-index: 5;
   text-transform: uppercase;
-  color: var(--color-brown);
+  color: var(--color-text);
 }
 
 .styleOne,
@@ -240,7 +240,7 @@ svg{
   width: 100%;
   max-width: 278px;
   height: 60px;
-  border: 1px solid var(--color-brown);
+  border: 1px solid var(--color-text);
   transform-origin: left;
   transform: skewY(-25deg);
 }
@@ -254,7 +254,7 @@ svg{
 .styleThree{
   top: 80px;
   transform: skewY(25deg);
-  background-color: var(--color-brown);
+  background-color: var(--color-text);
 }
 
 
@@ -262,7 +262,7 @@ svg{
   position: absolute;
   bottom: 15px;
   right: 0;
-  color: var(--color-brown);
+  color: var(--color-text);
   font-size: 24px;
 }
 
@@ -297,13 +297,13 @@ svg{
 
 .hero-main-title{
   font-size: 64px;
-  /*color: var(--text-gold);*/
+  /*color: var(--text-second);*/
   color: var(--color-text);
 }
 
 .hero-main-description{
   font-size: 18px;
-  /*color: var(--text-gold);*/
+  /*color: var(--text-second);*/
   color: var(--color-text);
 }
 
@@ -314,28 +314,28 @@ svg{
 }
 
 /* Other Colors Override */
-.gold-text{
-  color: var(--color-gold);
+.second-text{
+  color: var(--color-second);
 }
 
-.gold-border{
-  border-color: var(--color-gold);
+.second-border{
+  border-color: var(--color-second);
 }
 
-.gold-background{
-  background-color: var(--color-gold);
+.second-background{
+  background-color: var(--color-second);
 }
 
-.purple-text{
-  color: var(--color-purple);
+.backup-text{
+  color: var(--color-backup);
 }
 
-.purple-border{
-  border-color: var(--color-purple);
+.backup-border{
+  border-color: var(--color-backup);
 }
 
-.purple-background{
-  background-color: var(--color-purple);
+.backup-background{
+  background-color: var(--color-backup);
 }
 
 /* Media Queries */

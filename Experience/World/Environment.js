@@ -8,6 +8,13 @@ export default class Environment{
         this.experience = new Experience();
         this.scene = this.experience.scene;
         this.resources = this.experience.resources;
+        this.room = this.experience.world.room.actualRoom;
+
+        this.room.children.forEach( child => {
+            if (child.type === "RectAreaLight"){
+                this.rectLight = child;
+            }
+        });
 
         // this.gui = new GUI({ container: document.querySelector(".hero-main")});
         this.obj = {
@@ -59,10 +66,19 @@ export default class Environment{
                 b: 0.03529411764705882,
             });
             GSAP.to(this.sunLight, {
-                intensity: 0.78,
+                intensity: 0.48,
             });
             GSAP.to(this.ambientLight, {
                 intensity: 0.78,
+            });
+
+            GSAP.to(this.rectLight, {
+                intensity: 2.5,
+            });
+            GSAP.to(this.rectLight.color, {
+                r: 0.7058823529411765,
+                g: 0.5686274509803921,
+                b: 0.19215686274509805,
             });
         }
         else{
@@ -81,6 +97,15 @@ export default class Environment{
             });
             GSAP.to(this.ambientLight, {
                 intensity: 0.1,
+            });
+
+            GSAP.to(this.rectLight, {
+                intensity: 2,
+            });
+            GSAP.to(this.rectLight.color, {
+                r: 0.990,
+                g: 0.35,
+                b: 0.29,
             });
         }
     }

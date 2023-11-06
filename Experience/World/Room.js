@@ -49,7 +49,7 @@ export default class Room{
         const width = 2;
         const height = 2;
         const intensity = 2;
-        const rectLight = new THREE.RectAreaLight( 0xebb134, intensity,  width, height );
+        const rectLight = new THREE.RectAreaLight( 0xDC654C, intensity,  width, height );
         rectLight.position.set( 0.147278, 1.5, 0.3 );
         rectLight.rotation.x = -Math.PI / 2;
         rectLight.rotation.z = Math.PI / 4;
