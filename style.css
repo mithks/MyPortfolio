@@ -110,6 +110,8 @@ svg{
   margin: 0px 16px;
   border: none;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  font-size: 12px;
+  color: var(--color-bg);
 }
 
 .toggle-circle{
@@ -337,6 +339,59 @@ svg{
 .backup-background{
   background-color: var(--color-backup);
 }
+
+/* Email form */
+input[type="text"],
+input[type="email"],
+textarea {
+    border: 2px solid var(--color-main); /* Blue stroke */
+    border-radius: 10px; /* Rounded corners */
+    padding: 10px;
+    width: 100%;
+}
+
+input[type="submit"] {
+  background-color: var(--color-main); /* Blue background color */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounded corners */
+  color: var(--color-text); /* White text color */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 30px; /* Adjust padding for button size */
+  padding-right: 30px; /* Adjust padding for button size */
+  cursor: pointer; /* Change cursor on hover */
+  text-align: center; /* Center text horizontally */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  width: fit-content;
+  margin: 0 auto;
+}
+
+
+
+/* Style for button on hover (optional) */
+input[type="submit"]:hover {
+  background-color: var(--color-second); /* Darker blue on hover */
+}
+
+
+
+
+.social-link{
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 64px;
+  color: var(--color-text);
+}
+.social-link:hover{
+  cursor: pointer; /* Change cursor on hover */
+  color: var(--color-second);
+}
+
 
 /* Media Queries */
 
